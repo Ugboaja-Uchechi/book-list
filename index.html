@@ -2,20 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Book List</title>
 </head>
 <body>
-  <h1>Awesome books</h1>
-  <div class="list">
-
+  <div class="container">
+    <div id="errors"></div>
+    <h1>Awesome Book</h1>
+    <form id="book-form">
+      <div>
+        <label for="title">Title</label>
+        <input type="text" id="title" class="u-full-width" >
+      </div>
+      <div>
+        <label for="author">Author</label>
+        <input type="text" id="author" class="u-full-width" >
+      </div>
+      <div>
+        <label for="isbn">ISBN#</label>
+        <input type="text" id="isbn" class="u-full-width">
+      </div>
+      <div>
+        <input type="submit" value="Add" class="u-full-width">
+      </div>
+    </form>
+    <table class="u-full-width">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>ISBN</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="book-list"></tbody>
+    </table>
   </div>
-  <form class="form">
-    <input type="text" placeholder="Title" class="title"><br><br>
-    <input type="text" placeholder="Author" class="author"><br><br>
-    <button type="submit">Add</button>
-  </form>
-  <script src="script.js"></script>
+
+  <script src="main.js"></script>
 </body>
 </html>
