@@ -87,6 +87,9 @@ class Store {
 
   static add(book) {
     const books = Store.get();
+    if (book.isbn === '' || book.title === '' || book.author === '') {
+      return;
+    }
 
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
