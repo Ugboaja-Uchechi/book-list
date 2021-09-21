@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+// eslint-disable-next-line linebreak-style
 /* eslint-disable max-classes-per-file */
 /* eslint-disable linebreak-style */
 // /* eslint-disable no-undef
@@ -20,43 +22,46 @@ const selectors = {
 };
 
 class UI {
+   addBook = function (book) {
+     const list = document.createElement('tr');
+     list.innerHTML = `
+    <td>${book.title}</td>
+    <td>${book.author}</td>
+    <td>${book.isbn}</td>
+    <td><button class="delete">Remove</button></td>
+  `;
+     document.getElementById('book-list').appendChild(list);
+   };
+
+   clear = function () {
+     document.getElementById(selectors.title).value = '';
+     document.getElementById(selectors.author).value = '';
+     document.getElementById(selectors.isbn).value = '';
+   };
+
+   showAlert = function (message, className) {
+     // create a div
+     const div = document.createElement('div');
+     div.className = `alert ${className}`;
+     // addtext
+     div.appendChild(document.createTextNode(message));
+     // insert into the dom
+     const container = document.querySelector('.container');
+     const form = document.querySelector('#book-form');
+     container.insertBefore(div, form);
+     // set the timeout
+     setTimeout(() => {
+       div.remove();
+     }, 1000);
+   };
+
+   delete = function (target) {
+     if (target.className === 'delete') {
+       target.parentElement.parentElement.remove();
+     }
+   };
 }
 
-UI.prototype.addBook = function (book) {
-  const list = document.createElement('tr');
-  list.innerHTML = `
-  <td>${book.title}</td>
-  <td>${book.author}</td>
-  <td>${book.isbn}</td>
-  <td><button class="delete">Remove</button></td>
-`;
-  document.getElementById('book-list').appendChild(list);
-};
-UI.prototype.clear = function () {
-  document.getElementById(selectors.title).value = '';
-  document.getElementById(selectors.author).value = '';
-  document.getElementById(selectors.isbn).value = '';
-};
-UI.prototype.showAlert = function (message, className) {
-// create a div
-  const div = document.createElement('div');
-  div.className = `alert ${className}`;
-  // addtext
-  div.appendChild(document.createTextNode(message));
-  // insert into the dom
-  const container = document.querySelector('.container');
-  const form = document.querySelector('#book-form');
-  container.insertBefore(div, form);
-  // set the timeout
-  setTimeout(() => {
-    div.remove();
-  }, 1000);
-};
-UI.prototype.delete = function (target) {
-  if (target.className === 'delete') {
-    target.parentElement.parentElement.remove();
-  }
-};
 // local storage class
 class Store {
   static get() {
