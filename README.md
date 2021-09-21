@@ -1,6 +1,6 @@
 # Awesome Books
 
-This is my first javascript project at ![](https://img.shields.io/badge/Microverse-blueviolet)
+This is my "Awesome books" javascript project at ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Getting Started
 
@@ -17,8 +17,26 @@ HTML
 
 JAVASCRIPT
 
+Linters such as:
+
+Webhint
+
+ESlint
+
+Lighthouse
+
+# Features
+
+Users can add their favorite books and authors and it would be displayed
+
+Users can remove books and authors and it wouldn't be displayed
+
+Data is stored in the local storage
+
 ## Author(s)
+
 Ugboaja Uchechi
+
 Victor Chukwu
 
 ## 🤝 Contributing
