@@ -1,13 +1,16 @@
+/* eslint-disable max-classes-per-file */
 /* eslint-disable linebreak-style */
 // /* eslint-disable no-undef
 // eslint-disable no-use-before-define
 /* eslint-disable linebreak-style */
 // create the book constructor
 
-function Book(title, author, isbn) {
-  this.title = title;
-  this.author = author;
-  this.isbn = isbn;
+class Book {
+  constructor(title, author, isbn) {
+    this.title = title;
+    this.author = author;
+    this.isbn = isbn;
+  }
 }
 // UI constructor
 const selectors = {
@@ -15,7 +18,9 @@ const selectors = {
   author: 'author',
   isbn: 'isbn',
 };
-function UI() {}
+
+class UI {
+}
 
 UI.prototype.addBook = function (book) {
   const list = document.createElement('tr');
