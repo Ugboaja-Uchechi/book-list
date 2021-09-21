@@ -2,6 +2,8 @@
 
 This is my "Awesome books" javascript project at ![](https://img.shields.io/badge/Microverse-blueviolet)
 
+![image](https://user-images.githubusercontent.com/74814780/134149032-2f6ac0b9-9ee3-4527-a952-ab8141b2b73f.png)
+
 # Getting Started
 
 To get a local copy up and running follow these simple example steps.
