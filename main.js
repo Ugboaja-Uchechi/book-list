@@ -24,17 +24,14 @@ const selectors = {
 class UI {
    addBook = function (book) {
      const list = document.createElement('div');
-     list.classList.add('w-100', 'px-3');
-     list.innerHTML = `
-     <div class="d-flex align-items-center justify-content-between text-align-center w-100">
-     <div class="d-flex w-75 align-items-center text-align-center">
-    <h5 class="mt-2 w-25">"${book.title}"</h5>
-    <h5 class="mt-2 mx-2 w-25"> by </h5>
-    <h5 class="mt-2 mx-2 w-25">${book.author}</h5>
-    <h5 class = "ml-3 mt-2 mx-2" w-25">${book.isbn}</h5>
-    </div>
-  <div> <button class="delete">Remove</button></div>
-  </div>
+     list.classList.add('book-item');
+     list.innerHTML = ` 
+    <h5 class="mt-2">"${book.title}"</h5>
+    <h5 class="mt-2 mx-2"> by </h5>
+    <h5 class="mt-2 mx-2 ">${book.author}</h5>
+    <h5 class = "ml-3 mt-2 mx-2">${book.isbn}</h5>
+  <div class='delete-container'> <button class="delete">Remove</button></div>
+ 
   `;
      document.getElementById('book-list').appendChild(list);
    };
@@ -149,6 +146,7 @@ function load(e) {
 }
 // delete listener
 function deleteListener(e) {
+  console.log(e.target.parentElement.previousElementSibling.textContent);
   const ui = new UI();
   // eslint-disable-next-line no-undef
   ui.delete(e.target);

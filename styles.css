@@ -1,10 +1,28 @@
-div.px-3:nth-child(odd){
+.book-item:nth-child(odd){
   background-color: #f0f0f0;
   margin-top: 0;
 }
 
-div.px-3:nth-child(even) {
+.book-item:nth-child(even) {
   background-color: #fff;
+}
+
+.book-item {
+  padding: 0.4rem;
+  display: flex;
+  /* justify-content: space-between; */
+  margin-bottom: 0.2rem;
+}
+
+h5 {
+  width: 15%;
+}
+
+.delete-container {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 div.border-dark {
