@@ -23,13 +23,18 @@ const selectors = {
 
 class UI {
    addBook = function (book) {
-     const list = document.createElement('tr');
+     const list = document.createElement('div');
+     list.classList.add('w-100', 'my-2', 'bg-secondary', 'px-3');
      list.innerHTML = `
-    <h4>"${book.title}"</h4>
-    <p> by </p>
-    <h4>${book.author}</h4>
-    <h5> ISBN: ${book.isbn}</h5>
+     <div class="d-flex align-items-center justify-content-between w-100">
+     <div class="d-flex w-75 align-items-center text-center">
+    <h5 class="mx-3 w-25">"${book.title}"</h5>
+    <h5 class="mx-3 w-25"> by </h5>
+    <h5 class="mx-3 w-25">${book.author}</h5>
+    <h5 class = "ml-3 w-25"> ISBN: ${book.isbn}</h5>
+    </div>
   <div> <button class="delete">Remove</button></div>
+  </div>
   `;
      document.getElementById('book-list').appendChild(list);
    };
