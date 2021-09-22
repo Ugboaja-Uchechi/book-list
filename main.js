@@ -24,14 +24,14 @@ const selectors = {
 class UI {
    addBook = function (book) {
      const list = document.createElement('div');
-     list.classList.add('w-100', 'my-2', 'bg-secondary', 'px-3');
+     list.classList.add('w-100', 'px-3');
      list.innerHTML = `
-     <div class="d-flex align-items-center justify-content-between w-100">
-     <div class="d-flex w-75 align-items-center text-center">
-    <h5 class="mx-3 w-25">"${book.title}"</h5>
-    <h5 class="mx-3 w-25"> by </h5>
-    <h5 class="mx-3 w-25">${book.author}</h5>
-    <h5 class = "ml-3 w-25"> ISBN: ${book.isbn}</h5>
+     <div class="d-flex align-items-center justify-content-between text-align-center w-100">
+     <div class="d-flex w-75 align-items-center text-align-center">
+    <h5 class="mt-2 w-25">"${book.title}"</h5>
+    <h5 class="mt-2 mx-2 w-25"> by </h5>
+    <h5 class="mt-2 mx-2 w-25">${book.author}</h5>
+    <h5 class = "ml-3 mt-2 mx-2" w-25">${book.isbn}</h5>
     </div>
   <div> <button class="delete">Remove</button></div>
   </div>
