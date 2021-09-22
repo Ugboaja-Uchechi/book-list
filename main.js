@@ -23,12 +23,15 @@ const selectors = {
 
 class UI {
    addBook = function (book) {
-     const list = document.createElement('tr');
-     list.innerHTML = `
-    <td>${book.title}</td>
-    <td>${book.author}</td>
-    <td>${book.isbn}</td>
-    <td><button class="delete">Remove</button></td>
+     const list = document.createElement('div');
+     list.classList.add('book-item');
+     list.innerHTML = ` 
+    <h5 class="mt-2">"${book.title}"</h5>
+    <h5 class="mt-2 mx-2"> by </h5>
+    <h5 class="mt-2 mx-2 ">${book.author}</h5>
+    <h5 class = "ml-3 mt-2 mx-2">${book.isbn}</h5>
+  <div class='delete-container'> <button class="delete">Remove</button></div>
+ 
   `;
      document.getElementById('book-list').appendChild(list);
    };
@@ -143,6 +146,7 @@ function load(e) {
 }
 // delete listener
 function deleteListener(e) {
+  console.log(e.target.parentElement.previousElementSibling.textContent);
   const ui = new UI();
   // eslint-disable-next-line no-undef
   ui.delete(e.target);
