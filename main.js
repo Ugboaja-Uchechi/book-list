@@ -25,10 +25,11 @@ class UI {
    addBook = function (book) {
      const list = document.createElement('tr');
      list.innerHTML = `
-    <td>${book.title}</td>
-    <td>${book.author}</td>
-    <td>${book.isbn}</td>
-    <td><button class="delete">Remove</button></td>
+    <h4>"${book.title}"</h4>
+    <p> by </p>
+    <h4>${book.author}</h4>
+    <h5> ISBN: ${book.isbn}</h5>
+  <div> <button class="delete">Remove</button></div>
   `;
      document.getElementById('book-list').appendChild(list);
    };
