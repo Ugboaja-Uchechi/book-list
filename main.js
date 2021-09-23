@@ -1,12 +1,4 @@
-/* eslint-disable linebreak-style */
-// eslint-disable-next-line linebreak-style
 /* eslint-disable max-classes-per-file */
-/* eslint-disable linebreak-style */
-// /* eslint-disable no-undef
-// eslint-disable no-use-before-define
-/* eslint-disable linebreak-style */
-// create the book constructor
-
 class Book {
   constructor(title, author, isbn) {
     this.title = title;
@@ -108,17 +100,6 @@ class Store {
     localStorage.setItem('books', JSON.stringify(books));
   }
 }
-// load listen
-// eslint-disable-next-line no-use-before-define
-loadEvents();
-function loadEvents() {
-  document.addEventListener('DOMContentLoaded', Store.display);
-  // eslint-disable-next-line no-use-before-define
-  document.getElementById('book-form').addEventListener('submit', load);
-  // eslint-disable-next-line no-use-before-define
-  document.getElementById('book-list').addEventListener('click', deleteListener);
-}
-// DOM Loa
 
 function load(e) {
   const title = document.getElementById(selectors.title).value;
@@ -144,17 +125,23 @@ function load(e) {
 
   e.preventDefault();
 }
+
 // delete listener
 function deleteListener(e) {
   console.log(e.target.parentElement.previousElementSibling.textContent);
   const ui = new UI();
-  // eslint-disable-next-line no-undef
   ui.delete(e.target);
   // remove from LS
-  // eslint-disable-next-line no-undef
   Store.remove(e.target.parentElement.previousElementSibling.textContent);
   // show alert
   ui.showAlert('Book deleted', 'success');
-  // eslint-disable-next-line no-undef
   e.preventDefault();
 }
+
+// load listen
+function loadEvents() {
+  document.addEventListener('DOMContentLoaded', Store.display);
+  document.getElementById('book-form').addEventListener('submit', load);
+  document.getElementById('book-list').addEventListener('click', deleteListener);
+}
+loadEvents();
