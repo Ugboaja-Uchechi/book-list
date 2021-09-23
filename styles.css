@@ -84,12 +84,16 @@ input::placeholder {
   border-right: none;
 }
 
-a, span {
+a,
+span {
   text-decoration: none;
   color: black;
 }
 
-span:active, span:hover, span:link, a:link {
+span:active,
+span:hover,
+span:link,
+a:link {
   color: rgb(0, 110, 255);
 }
 
@@ -114,7 +118,8 @@ span:active, span:hover, span:link, a:link {
   margin: 0.5rem auto;
 }
 
-.contact p, li {
+.contact p,
+li {
   font-weight: 700;
   color: black;
 }
@@ -130,10 +135,10 @@ span:active, span:hover, span:link, a:link {
 footer {
   position: absolute;
   bottom: 2%;
- left: 50%;
- right: 0;
- width: 90%;
- transform: translateX(-50%);
+  left: 50%;
+  right: 0;
+  width: 90%;
+  transform: translateX(-50%);
   padding: 1rem 0 1rem 3rem;
   border: 2px solid black;
   color: black;
