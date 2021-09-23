@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 const contact = document.querySelector('.contact');
 const form = document.querySelector('#book-form');
 const bookList = document.querySelector('#book-list');
