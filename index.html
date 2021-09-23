@@ -9,6 +9,21 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <nav>
+    <div class="nav">
+      <a href="#" class="nav-link">
+        <span>Awesome</span>
+        <span>List</span>
+      </a>
+      <div class="nav-link2 link-form">
+        <a href="#">Add new</a>
+      </div>
+      <div class="nav-link2 link-contact">
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <div id="time"></div>
   <div class="container">
     <div id="errors"></div>
     <h1 class="text-center text-dark mt-2 mb-2">Awesome Books</h1>
@@ -16,24 +31,38 @@
     <div class="border-dark w-100 mb-4" id="book-list">
      
     </div>
-    <div class="line"></div>
-    <form class="d-flex align-items-center flex-column w-100" id="book-form">
-      <h3 class="text-center text-dark">Add a new book</h3>
-      <div class="w-50">
-        <input type="text" id="title" placeholder="Title" class="mb-3 p-1 w-100" >
-      </div>
-      <div class="w-50">
-        <input type="text" id="author" placeholder="Author" class="mb-3 p-1 w-100" >
-      </div>
-      <div class="w-50">
-        <input type="text" id="isbn" class="mb-3 p-1 w-100" placeholder="ISBN" required>
-      </div>
-      <div class="d-flex align-items-center w-50 justify-content-end">
-        <input type="submit" value="Add" class="border-dark text-dark mb-3">
-      </div>
-    </form>
+    <div id="book-form">
+      <form class="d-flex align-items-center flex-column w-100">
+        <h3 class="text-center text-dark">Add a new book</h3>
+        <div class="w-50">
+          <input type="text" id="title" placeholder="Title" class="mb-3 p-1 w-100" >
+        </div>
+        <div class="w-50">
+          <input type="text" id="author" placeholder="Author" class="mb-3 p-1 w-100" >
+        </div>
+        <div class="w-50">
+          <input type="text" id="isbn" class="mb-3 p-1 w-100" placeholder="ISBN" required>
+        </div>
+        <div class="d-flex align-items-center w-50 justify-content-end">
+          <input type="submit" value="Add" class="border-dark text-dark mb-3">
+        </div>
+      </form>
+    </div>
   </div>
 
+  <!-- <section class="contact">
+    <h2>Contact Information</h2>
+    <p>Do you have any questions or you just want to say "Hello"? You can reach out to us!</p>
+    <ul>
+      <li>Our e-mail: mail.gmail.com</li>
+      <li>Our phone number: 123456789</li>
+      <li>Our address: number, Street, City, Country</li>
+    </ul>
+  </section>
+  <footer>Copyright</footer> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
   <script src="main.js"></script>
+  <script src="contact.js"></script>
 </body>
 </html>

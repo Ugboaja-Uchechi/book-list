@@ -1,3 +1,7 @@
+body {
+  width: 100%;
+}
+
 .book-item {
   padding: 0.4rem;
   display: flex;
@@ -38,16 +42,6 @@ div.border-dark {
   line-height: 1.5rem;
 }
 
-.line {
-  width: 150px;
-  height: 3px;
-  background-color: black;
-  border: 1px solid black;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0.8rem;
-}
-
 input {
   border: 2px solid black;
 }
@@ -61,4 +55,82 @@ input::placeholder {
   background-color: #fff;
   box-shadow: 3px 2px;
   font-weight: 500;
+}
+
+.nav {
+  display: flex;
+  border: 2px solid black;
+  margin: 0.2rem 1rem;
+  padding: 0 0.2rem;
+}
+
+.nav-link {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  border-right: 1px solid black;
+}
+
+.nav-link2 {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-right: 1px solid black;
+}
+
+.nav-link2:last-of-type {
+  border-right: none;
+}
+
+a, span {
+  text-decoration: none;
+  color: black;
+}
+
+span:active, span:hover, span:link, a:link {
+  color: rgb(0, 110, 255);
+}
+
+#book-form {
+  display: none;
+}
+
+#book-list {
+  display: none;
+}
+
+#time {
+  margin-left: auto;
+  width: 20%;
+  color: black;
+}
+
+.contact {
+  display: none;
+  width: 70%;
+  color: black;
+  margin: 0.5rem auto;
+}
+
+.contact p, li {
+  font-weight: 700;
+  color: black;
+}
+
+.no-show {
+  display: none;
+}
+
+.show {
+  display: block !important;
+}
+
+footer {
+  margin: 1rem;
+  padding: 1rem 0 1rem 3rem;
+  border: 2px solid black;
+  color: black;
+  font-size: 1.3rem;
 }
