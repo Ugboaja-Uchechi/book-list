@@ -38,6 +38,8 @@ Data is stored in the local storage
 ## Author(s)
 
 Ugboaja Uchechi
+- [GitHub](https://github.com/Ugboaja-Uchechi)
+- [LinkedIn](https://www.linkedin.com/in/stephanie-ugboaja-930a2a216/)
 
 Victor Chukwu
 
