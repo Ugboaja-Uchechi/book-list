@@ -53,8 +53,6 @@ Give a ⭐️ if you like this project!
 
 - Microverse
 
-- Cindy Shin who owns the original project idea
-
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
